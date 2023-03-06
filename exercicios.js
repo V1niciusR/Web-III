@@ -4,14 +4,14 @@
 const prompt = require("prompt-sync")();
 
 /* Prompt retorna uma string, logo precisamos converter para número */
-const numeroIdades=prompt("Quantas idades precisamos ler?");
+const numeroIdades=prompt("Quantas idades precisamos ler? ");
 
 const listaIdades= new Array(Number(numeroIdades));
 
 let i = 0;
 let tL = listaIdades.length;
 while(i < tL){
-    let idade = prompt(`Qual a idade núemero ${i}`);
+    let idade = prompt(`Qual a idade núemero ${i}: `);
     listaIdades[i]=Number(idade);
     i++;
 }
