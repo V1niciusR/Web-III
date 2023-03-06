@@ -11,7 +11,7 @@ const listaIdades= new Array(Number(numeroIdades));
 let i = 0;
 let tL = listaIdades.length;
 while(i < tL){
-    let idade = prompt(`Qual a idade núemero ${i}: `);
+    let idade = prompt(`Idade núemero ${i}: `);
     listaIdades[i]=Number(idade);
     i++;
 }
