@@ -1,2 +1,2 @@
-//Leia várias ideias e calcule a média
-//Entre as idades (usar uma variável para idade)
+/*Leia várias ideias e calcule a média entre as idades (usar uma variável para idade)*/
+
