@@ -15,13 +15,16 @@ while (i < tL) {
     listaIdades[i] = Number(idade);
     i++;
 }
+
 /* Imprimindo todas as idades */
 /* Vamos zerar o índice igual a zero */
+/*
 i = 0;
 while (i < tL) {
     console.log(`Item ${i}: ${listaIdades[i]}`);
     i++;
 }
+*/
 
 /* Cálculo média aritmética */
 /* Já tenho um índice, vamos reutilizar a variável e zerar ela */
@@ -32,4 +35,4 @@ while (i < tL) {
     i++;
 }
 let media = somaItemLista / numeroIdades;
-console.log(`A média das idades é ${media}: `);
+console.log(`A média das idades é ${media}`);
