@@ -21,5 +21,5 @@ while(i < tL){
 i = 0;
 while(i < tL){
     let somaItemLista = 0;
-    somaItemLista = somaItemLista + listaIdades[indice]; 
+    somaItemLista = somaItemLista + listaIdades[i]; 
 }
