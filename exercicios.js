@@ -8,10 +8,10 @@ const numeroIdades=prompt("Quantas idades precisamos ler?");
 
 const listaIdades= new Array(Number(numeroIdades));
 
-let indice=0;
-let tamnhoLista=listaIdades.length;
-while(indice<tamnhoLista){
-    let idade = prompt(`Qual a idade núemro ${indice}`);
-    listaIdades[indice]=Number(idade);
-    indice++;
+let i = 0;
+let tamnhoLista = listaIdades.length;
+while(i < tamnhoLista){
+    let idade = prompt(`Qual a idade núemero ${i}`);
+    listaIdades[i]=Number(idade);
+    i++;
 }
