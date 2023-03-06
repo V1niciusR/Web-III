@@ -19,7 +19,9 @@ while(i < tL){
 /* Cálculo média aritmética */
 /* Já tenho um índice, vamos reutilizar a variável e zerar ela */
 i = 0;
+let somaItemLista = 0;
 while(i < tL){
-    let somaItemLista = 0;
     somaItemLista = somaItemLista + listaIdades[i]; 
 }
+let media=somaItemLista/numeroIdades;
+console.log(`A média das idades é ${media}: `)                                   
