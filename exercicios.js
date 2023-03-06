@@ -32,4 +32,4 @@ while (i < tL) {
     i++;
 }
 let media = somaItemLista / numeroIdades;
-console.log(`A média das idades é ${media}: `);                           
+console.log(`A média das idades é ${media}: `);
