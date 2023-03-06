@@ -4,21 +4,21 @@
 const prompt = require("prompt-sync")();
 
 /* Prompt retorna uma string, logo precisamos converter para número */
-const numeroIdades=prompt("Quantas idades precisamos ler? ");
+const numeroIdades = prompt("Quantas idades precisamos ler? ");
 
-const listaIdades= new Array(Number(numeroIdades));
+const listaIdades = new Array(Number(numeroIdades));
 
 let i = 0;
 let tL = listaIdades.length;
-while(i < tL){
+while (i < tL) {
     let idade = prompt(`Idade núemero ${i}: `);
-    listaIdades[i]=Number(idade);
+    listaIdades[i] = Number(idade);
     i++;
 }
-/* Imprimindo todas as idades */ 
+/* Imprimindo todas as idades */
 /* Vamos zerar o índice igual a zero */
 i = 0;
-while(i < tL){
+while (i < tL) {
     console.log(`Item ${i}: ${listaIdades[i]}`);
     i++;
 }
@@ -27,8 +27,9 @@ while(i < tL){
 /* Já tenho um índice, vamos reutilizar a variável e zerar ela */
 i = 0;
 let somaItemLista = 0;
-while(i < tL){
-    somaItemLista = somaItemLista + listaIdades[i]; 
+while (i < tL) {
+    somaItemLista = somaItemLista + listaIdades[i];
+    i++;
 }
-let media=somaItemLista/numeroIdades;
+let media = somaItemLista / numeroIdades;
 console.log(`A média das idades é ${media}: `);                           
