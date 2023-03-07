@@ -4,7 +4,7 @@
 
 /* Importando prompt-sync */
 const prompt = require("prompt-sync")();
-const numero = prompt("Digite um número: ");
+const numero = prompt("Digite um número para ver a sua tabuada: ");
 console.log("Calculando a tabuada...");
 
 for (let i = 1; i <= 10; i++) {
