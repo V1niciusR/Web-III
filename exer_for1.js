@@ -8,7 +8,7 @@ const numero = prompt("Digite um número: ");
 console.log("Calculando a tabuada...");
 
 for (let i = 1; i <= 10; i++) {
-    console.log(Number(numero) + "*" + i.toString() + "=" + Number(numero) * i);
+    console.log(numero + "*" + i.toString() + "=" + (Number(numero) * i).toString());
 }
 
 console.log("Fim...");
