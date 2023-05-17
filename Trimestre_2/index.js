@@ -13,6 +13,5 @@ try {
   console.log(`Não foi possível estabelecer conexão com o banco de dados. Erro: ${error}`)
 }
 
-//faça com que peça a usuario datas e armazena no banco de dados
 
 
