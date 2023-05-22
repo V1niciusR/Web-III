@@ -16,16 +16,6 @@ while (i < tL) {
     i++;
 }
 
-/* Imprimindo todas as idades */
-/* Vamos zerar o índice igual a zero */
-/*
-i = 0;
-while (i < tL) {
-    console.log(`Item ${i}: ${listaIdades[i]}`);
-    i++;
-}
-*/
-
 /* Cálculo média aritmética */
 /* Já tenho um índice, vamos reutilizar a variável e zerar ela */
 i = 0;
