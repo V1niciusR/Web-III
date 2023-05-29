@@ -7,18 +7,18 @@ let idade_camila = parseInt(prompt("Digite a idade 3: "));
 let idade_de_camila;
 
 // Determinar a idade de Camila
-if (idade_cibele < idade_celeste) {
-  if (idade_camila < idade_cibele) {
+if (idade_cibele <= idade_celeste) {
+  if (idade_camila <= idade_cibele) {
     idade_de_camila = idade_cibele;
-  } else if (idade_camila > idade_celeste) {
+  } else if (idade_camila >= idade_celeste) {
     idade_de_camila = idade_celeste;
   } else {
     idade_de_camila = idade_camila;
   }
 } else {
-  if (idade_camila < idade_celeste) {
+  if (idade_camila <= idade_celeste) {
     idade_de_camila = idade_celeste;
-  } else if (idade_camila > idade_cibele) {
+  } else if (idade_camila >= idade_cibele) {
     idade_de_camila = idade_cibele;
   } else {
     idade_de_camila = idade_camila;
