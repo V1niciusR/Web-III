@@ -27,3 +27,4 @@ if (idade_cibele <= idade_celeste) {
 
 // Imprimir a idade de Camila
 console.log("A idade de Camila é:", idade_de_camila);
+
