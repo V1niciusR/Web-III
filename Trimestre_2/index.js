@@ -15,3 +15,11 @@ try {
 
 
 
+
+function Inserir(Nome, Idade){
+  connection.query(
+    'INSERT INTO Aluno (Nome, Idade) VALUES (?, ?)',
+    [Nome, Idade],
+    function(err, results) {
+      if (err)
+}
