@@ -1,30 +1,37 @@
-const prompt = require('prompt-sync')();
+var conta = 0;
+var acougue = 0;
+var farmacia = 0;
+var padaria = 0;
+scanf("%d", "conta");
+scanf("%d", "acougue");
+scanf("%d", "farmacia");
+scanf("%d", "padaria");
+var soma = acougue + farmacia + padaria;
 
-let idade_cibele = parseInt(prompt("Digite a idade 1: "));
-let idade_celeste = parseInt(prompt("Digite a idade 2: "));
-let idade_camila = parseInt(prompt("Digite a idade 3: "));
-
-let idade_de_camila;
-
-// Determinar a idade de Camila
-if (idade_cibele <= idade_celeste) {
-  if (idade_camila <= idade_cibele) {
-    idade_de_camila = idade_cibele;
-  } else if (idade_camila >= idade_celeste) {
-    idade_de_camila = idade_celeste;
+if (conta >= soma) {
+  printf("%d", "3");
+}
+else {
+  soma = acougue + farmacia;
+  if (conta >= soma) {
+    printf("%d", "2");
   } else {
-    idade_de_camila = idade_camila;
-  }
-} else {
-  if (idade_camila <= idade_celeste) {
-    idade_de_camila = idade_celeste;
-  } else if (idade_camila >= idade_cibele) {
-    idade_de_camila = idade_cibele;
-  } else {
-    idade_de_camila = idade_camila;
+    soma = acougue + padaria;
+    if (conta >= soma) {
+      printf("%d", "2");
+    } else {
+      soma = farmacia + padaria;
+      if (conta >= soma) {
+        printf("%d", "2");
+      } else {
+        if (conta >= acougue || conta >= padaria || conta >= farmacia)
+          printf("%d", "1");
+        else {
+          printf("%d", "0");
+        }
+      }
+    }
+
   }
 }
-
-// Imprimir a idade de Camila
-console.log("A idade de Camila é:", idade_de_camila);
 
