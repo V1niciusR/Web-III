@@ -20,7 +20,11 @@ try {
   console.error(error.message);
 }
 
+/* INSERIR E APAGAR DADOS */
+
 Inserir('João', 20);
+
+/* /INSERIR E APAGAR DADOS */
 
 function Inserir(Nome, Idade) {
   connection.query(
