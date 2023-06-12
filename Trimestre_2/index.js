@@ -10,21 +10,19 @@ try {
 }
 
   catch(error){
-    error.stack="";
+    error.stack=" ";
     console.error(error.message);
   }
 
-
-
 function Inserir(Nome, Idade){
   connection.query(
-    'INSERT INTO Aluno (Nome, Idade) VALUES (?, ?)',
+    'INSERT INTO aluno (Nome, Idade) VALUES (?, ?)',
     [Nome, Idade],
     function(err, results) {
       if (err)
       throw new Error("Problema na inserção");
       else
-      console.log("Inserção feita com sucesso");
+      console.log("Registro inserido com sucesso");
     }
   );
 }
