@@ -1,21 +1,22 @@
 const mysql = require('mysql2/promise')
+let connection;
 
-// Crie uma conexão com o banco de dados MySQL
-// create the connection to database
 try {
-  const connection =  mysql.createConnection({
+  connection =  mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    database: 'vinicius'
+    database: 'escola'
   });
-  console.log('Conexão com o banco de dados estabelecida!')
-} catch (error) {
-  console.log(`Não foi possível estabelecer conexão com o banco de dados. Erro: ${error}`)
 }
 
+  catch(error){
+    error.stack="";
+    console.error(error.message);
+  }
 
 
 
+/*
 function Inserir(Nome, Idade){
   connection.query(
     'INSERT INTO Aluno (Nome, Idade) VALUES (?, ?)',
@@ -23,3 +24,4 @@ function Inserir(Nome, Idade){
     function(err, results) {
       if (err)
 }
+*/
