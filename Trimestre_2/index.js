@@ -16,12 +16,15 @@ try {
 
 
 
-/*
 function Inserir(Nome, Idade){
   connection.query(
     'INSERT INTO Aluno (Nome, Idade) VALUES (?, ?)',
     [Nome, Idade],
     function(err, results) {
       if (err)
+      throw new Error("Problema na inserção");
+      else
+      console.log("Inserção feita com sucesso");
+    }
+  );
 }
-*/
