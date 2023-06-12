@@ -20,7 +20,7 @@ try {
   console.error(error.message);
 }
 
-Inserir("João", 20);
+Inserir('João', 20);
 
 function Inserir(Nome, Idade) {
   connection.query(
@@ -31,6 +31,20 @@ function Inserir(Nome, Idade) {
         throw new Error("Problema na inserção");
       } else {
         console.log("Registro inserido com sucesso");
+      }
+    }
+  );
+}
+
+function Apagar(id) {
+  connection.query(
+    'DELETE FROM aluno WHERE id = ?',
+    [id],
+    function(err, results) {
+      if (err) {
+        throw new Error("Problema na remoção");
+      } else {
+        console.log("Registro removido com sucesso");
       }
     }
   );
