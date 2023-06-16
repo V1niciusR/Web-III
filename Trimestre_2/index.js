@@ -22,11 +22,11 @@ try {
 
 /* INSERIR E APAGAR DADOS */
 
-Inserir('João', 20);
-Inserir('Maria', 18);
-Inserir('José', 19);
-Inserir('Ana', 21);
-Inserir('Pedro', 22);
+Apagar(5);
+Apagar(6);
+Apagar(7);
+Apagar(8);
+Apagar(9);
 
 /* /INSERIR E APAGAR DADOS */
 
