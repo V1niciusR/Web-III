@@ -2,7 +2,7 @@ const mysql = require('mysql2')
 let connection;
 
 try {
-  connection =  mysql.createConnection({
+  connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'escola'
@@ -23,6 +23,10 @@ try {
 /* INSERIR E APAGAR DADOS */
 
 Inserir('João', 20);
+Inserir('Maria', 18);
+Inserir('José', 19);
+Inserir('Ana', 21);
+Inserir('Pedro', 22);
 
 /* /INSERIR E APAGAR DADOS */
 
@@ -30,7 +34,7 @@ function Inserir(Nome, Idade) {
   connection.query(
     'INSERT INTO aluno (Nome, Idade) VALUES (?, ?)',
     [Nome, Idade],
-    function(err, results) {
+    function (err, results) {
       if (err) {
         throw new Error("Problema na inserção");
       } else {
@@ -44,7 +48,7 @@ function Apagar(id) {
   connection.query(
     'DELETE FROM aluno WHERE id = ?',
     [id],
-    function(err, results) {
+    function (err, results) {
       if (err) {
         throw new Error("Problema na remoção");
       } else {
