@@ -57,3 +57,17 @@ function Apagar(id) {
     }
   );
 }
+
+function Atualizar(id, Nome, Idade) {
+  connection.query(
+    'UPDATE aluno SET Nome = ?, Idade = ? WHERE id = ?',
+    [Nome, Idade, id],
+    function (err, results) {
+      if (err) {
+        throw new Error("Problema na atualização");
+      } else {
+        console.log("Registro atualizado com sucesso");
+      }
+    }
+  );
+}
