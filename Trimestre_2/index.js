@@ -16,7 +16,7 @@ try {
     console.log('Conexão estabelecida com sucesso!');
   });
 } catch (error) {
-  error.stack = 'Erro na conexão com o banco de dados';
+  error.stack = 'Erro na conexão com o banco de dados!';
   console.error(error.message);
 }
 
@@ -36,9 +36,9 @@ function Inserir(Nome, Idade) {
     [Nome, Idade],
     function (err, results) {
       if (err) {
-        throw new Error("Problema na inserção");
+        throw new Error("Problema na inserção.");
       } else {
-        console.log("Registro inserido com sucesso");
+        console.log("Registro inserido com sucesso.");
       }
     }
   );
@@ -50,9 +50,9 @@ function Apagar(id) {
     [id],
     function (err, results) {
       if (err) {
-        throw new Error("Problema na remoção");
+        throw new Error("Problema na remoção.");
       } else {
-        console.log("Registro removido com sucesso");
+        console.log("Registro removido com sucesso.");
       }
     }
   );
@@ -64,9 +64,9 @@ function Atualizar(id, Nome, Idade) {
     [Nome, Idade, id],
     function (err, results) {
       if (err) {
-        throw new Error("Problema na atualização");
+        throw new Error("Problema na atualização.");
       } else {
-        console.log("Registro atualizado com sucesso");
+        console.log("Registro atualizado com sucesso.");
       }
     }
   );
