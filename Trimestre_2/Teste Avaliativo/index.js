@@ -15,20 +15,7 @@ try {
     //inserir('João', 12);
 
     // Apagando um aluno por ID
-    Apagar(1);
-    Apagar(2);
-    Apagar(3);
-    Apagar(4);
-    Apagar(5);
-    Apagar(6);
-    Apagar(7);
-    Apagar(8);
-    Apagar(9);
-    Apagar(10);
-    Apagar(11);
-    Apagar(12);
-    Apagar(13);
-    Apagar(14);// Descomente esta linha para testar a função de apagar
+    //Apagar(1);// Descomente esta linha para testar a função de apagar
 
     // Listar todos os alunos
     ListarTodosAlunos();
