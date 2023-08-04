@@ -56,15 +56,15 @@ function Apagar(id) {
 }
 
 function Atualizar(id, Nome) {
-    connection.query(
-      'UPDATE amigos_vinicius SET Nome = ? WHERE id = ?',
-      [Nome, id],
-      function (err, results) {
-        if (err) {
-          throw new Error("Problema na atualização.");
-        } else {
-          console.log("Registro atualizado com sucesso.");
-        }
+  connection.query(
+    'UPDATE amigos_vinicius SET Nome = ? WHERE id = ?',
+    [Nome, id],
+    function (err, results) {
+      if (err) {
+        throw new Error("Problema na atualização.");
+      } else {
+        console.log("Registro atualizado com sucesso.");
       }
-    );
-  }
+    }
+  );
+}
