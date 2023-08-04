@@ -22,11 +22,8 @@ try {
 
 /* INSERIR E APAGAR DADOS */
 
-Inserir("João", 20);
-Inserir("Maria", 18);
-Inserir("José", 19);
-Inserir("Ana", 21);
-
+Inserir('João', 12); // Inserir um aluno com nome 'João' e idade 12
+Inserir('Maria', 15); // Inserir um aluno com nome 'Maria' e idade 15
 
 /* /INSERIR E APAGAR DADOS */
 
