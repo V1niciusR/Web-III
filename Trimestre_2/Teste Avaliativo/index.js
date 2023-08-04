@@ -9,13 +9,18 @@ try {
         database: 'escola01'
     });
 
-    /* INSERIR, APAGAR E MODIFICAR OS DADOS */
+    /*------------------------------------------------------ funções disponíveis ------------------------------------------------------*/
 
     // Inserindo alunos na tabela
-    //inserir('João', 12);
+    inserir('', );
 
     // Apagando um aluno por ID
-    //Apagar(1);// Descomente esta linha para testar a função de apagar
+    Apagar();// Descomente esta linha para testar a função de apagar
+
+    // Retornar um aluno por ID
+    RetornarAlunoPorId(); // Altere o ID conforme necessário
+
+    /*------------------------------------------------------ //funções disponíveis ------------------------------------------------------*/
 
     // Listar todos os alunos
     ListarTodosAlunos();
@@ -25,10 +30,8 @@ try {
 
     // Listar alunos com idade entre 14 e 18 anos
     ListarAlunosEntre14e18();
-
-    // Retornar um aluno por ID
-    RetornarAlunoPorId(3); // Altere o ID conforme necessário
 }
+
 catch (error) {
     error.stack = "";
     console.error(error.message);
