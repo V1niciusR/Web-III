@@ -11,17 +11,18 @@ app.use(bodyParser.urlencoded({extended: false})) ;
 app.use(bodyParser.json()) ;
 
 app.get('/', (req, res) => {
- 
   res.send(`
   <h1>Página principal</h1>
   <h3>Cadastro Aluno</h3>
   <ul>
-  <li><a href="/inserir">Inserir</a></li>
-  <li><a href="/apagar">Apagar</a></li>
-  <li><a href="/listar">Listar</a></li>
+    <li><a href="/inserir">Inserir</a></li>
+    <li><a href="/apagar">Apagar</a></li>
+    <li><a href="/listar">Listar</a></li>
+    <li><a href="/atualizar">Atualizar</a></li> <!-- Adicione esta linha -->
   </ul>
   `);
-})
+});
+
 
 app.get('/sucesso', (req, res) => {
   res.send(`<h1 style="color:green;"> Operação executada com sucesso ;)</h1>
@@ -80,6 +81,7 @@ app.post('/inseriraluno', (req, res) => {
          <ul>
            <li><a href="/inserir">Adicionar Aluno</a></li>
            <li><a href="/apagar">Apagar Aluno</a></li>
+           <li><a href="/atualizar">Atualizar</a></li>
          </ul>
          <br>
           <table>
@@ -101,6 +103,7 @@ app.get('/apagar', (req, res) => {
         <li><a href="/">Principal</a></li>
         <li><a href="/inserir">Inserir</a></li>
         <li><a href="/listar">Listar</a></li>
+        <li><a href="/atualizar">Atualizar</a></li>
       </ul>
       <h1>Apagar Aluno</h1>
       <form action="/apagaraluno" method="post">
@@ -128,6 +131,43 @@ app.get('/apagar', (req, res) => {
       }
     });
   });
+
+  app.get('/atualizar', (req, res) => {
+    res.send(`
+      <ul>
+        <li><a href="/">Principal</a></li>
+        <li><a href="/inserir">Inserir</a></li>
+        <li><a href="/listar">Listar</a></li>
+      </ul>
+      <h1>Atualizar Aluno</h1>
+      <form action="/atualizaraluno" method="post">
+        <label>ID do Aluno:</label>
+        <input type="number" name="id" required><br><br>
+        <label>Novo Nome:</label>
+        <input type="text" name="novoNome" required><br><br>
+        <input type="submit" value="Atualizar">
+      </form>
+    `);
+  });
+
+  app.post('/atualizaraluno', (req, res) => {
+    const idAluno = req.body.id;
+    const novoNome = req.body.novoNome;
+  
+    aluno.Atualizar(idAluno, novoNome, (err, result) => {
+      if (err) {
+        console.error(err);
+        res.redirect('/erro');
+      } else {
+        if (result.affectedRows > 0) {
+          res.redirect('/sucesso');
+        } else {
+          res.redirect('/erro');
+        }
+      }
+    });
+  });
+  
  
 
 app.listen('3000', () => {

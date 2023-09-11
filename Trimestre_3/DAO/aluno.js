@@ -100,4 +100,21 @@ function Apagar(idAluno, callback) {
     );
   }
 
-  module.exports = { Inserir, ListarTodosAlunos, Apagar };
+  function Atualizar(id, novoNome, callback) {
+    connection.query(
+      "UPDATE aluno SET nome = ? WHERE aluno.id = ?",
+      [novoNome, id],
+      function (err, results) {
+        if (err) {
+          console.error('Erro ao atualizar aluno:', err);
+          callback(err, null);
+        } else {
+          console.log('Resultado da operação de atualizar aluno:', results);
+          callback(null, results);
+        }
+      }
+    );
+  }
+  
+
+  module.exports = { Inserir, ListarTodosAlunos, Apagar, Atualizar };
