@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Importe a função validarCPF
+const validarCPF = professor.validarCPF;
+
 app.get('/', (req, res) => {
     res.send(`
     <h1>Página principal</h1>
@@ -59,18 +62,25 @@ app.post('/inserirprofessor', (req, res) => {
     const nome = req.body.nome;
     const titulacao = req.body.titulacao;
 
-    professor.Inserir(cpf, nome, titulacao, (err, rows) => {
-        if (err) {
-            console.error(err);
-            res.redirect('/erro');
-        } else {
-            if (rows > 0) {
-                res.redirect('/sucesso');
-            } else {
+    // Use a função validarCPF
+    try {
+        validarCPF(cpf);
+        professor.Inserir(cpf, nome, titulacao, (err, rows) => {
+            if (err) {
+                console.error(err);
                 res.redirect('/erro');
+            } else {
+                if (rows > 0) {
+                    res.redirect('/sucesso');
+                } else {
+                    res.redirect('/erro');
+                }
             }
-        }
-    });
+        });
+    } catch (error) {
+        console.error(error);
+        res.redirect('/erro');
+    }
 });
 
 app.get('/listar', (req, res) => {

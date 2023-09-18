@@ -44,9 +44,8 @@ function validarCPF(cpf) {
     }
 }
 
-
 function Inserir(cpf, nome, titulacao, callback) {
-    console.log('CPF recebido:', cpf); // Adicione esta linha para depuração
+    console.log('CPF recebido:', cpf);
     try {
         validarCPF(cpf);
         connection.query(
@@ -64,7 +63,6 @@ function Inserir(cpf, nome, titulacao, callback) {
         callback(error, null);
     }
 }
-
 
 function ListarTodosProfessores(callback) {
     connection.query(
@@ -107,4 +105,5 @@ function Atualizar(idProfessor, novoNome, callback) {
     );
 }
 
-module.exports = { Inserir, ListarTodosProfessores, Apagar, Atualizar };
+module.exports = { Inserir, ListarTodosProfessores, Apagar, Atualizar, validarCPF };
+
