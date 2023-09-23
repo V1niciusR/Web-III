@@ -8,12 +8,72 @@ const professor = require('./DAO/professor'); // Importe o módulo professor
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Estilos CSS para deixar a página mais atrativa
+const styles = `
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      background-color: #007bff;
+      overflow: hidden;
+    }
+    li {
+      float: left;
+      margin-right: 20px;
+    }
+    li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    li a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+`;
+
 // Rota da página inicial
 app.get('/', (req, res) => {
   res.send(`
     <html>
     <head>
       <title>Cadastro de Professores</title>
+      ${styles}
     </head>
     <body>
       <h1>Bem-vindo ao Cadastro de Professores</h1>
