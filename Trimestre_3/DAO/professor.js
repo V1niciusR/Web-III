@@ -1,4 +1,5 @@
 const mysql = require('mysql2');
+const cpfCheck = require('cpf-check');
 
 let connection;
 
@@ -36,7 +37,7 @@ function validarCPF(cpf) {
   
   
   function Inserir(cpf, nome, titulacao, callback) {
-    if (!validarCPF(cpf)) {
+    if (!cpfCheck.validate(cpf)) {
       const error = new Error('CPF inválido');
       return callback(error, null);
     }
